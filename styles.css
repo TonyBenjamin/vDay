@@ -1,0 +1,120 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f9e3e3;
+    font-family: 'Arial', sans-serif;
+    flex-direction: column;
+
+    position: relative;
+    overflow: hidden; /* Prevents the dog from scrolling */
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 2.5em;
+    color: #d32f2f;
+  }
+  
+  .buttons {
+    margin-top: 20px;
+  }
+  .buttons:active {
+    transform: scale(0.95); /* Add a pressed effect */
+  }
+
+  
+  .yes-button {
+    font-size: 1.5em;
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+
+  .yes-button:hover {
+    animation: expand 2s infinite;
+    animation-direction: alternate;
+    transition: width 2s ease-in-out;
+  }
+  
+  .no-button {
+    font-size: 1.5em;
+    padding: 10px 20px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+  .no-button:hover {
+    animation: expand 2s infinite;
+    animation-direction: alternate;
+    transition: width 2s ease-in-out;
+  }
+  
+  .gif_container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+
+    #dog-button {
+        background: none; /* Remove default button background */
+        border: none; /* Remove default button border */
+        padding: 0; /* Remove default padding */
+        position: absolute;
+        bottom: 0;
+        right: 0; /* Start off-screen */
+        /* animation: bounceDog 5s infinite; */
+        cursor: pointer; /* Change cursor to pointer for button */
+    }
+
+    .tooltip {
+        visibility: hidden;
+        width: 100px;
+        background-color: rgb(245, 185, 75);
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px;
+        position: absolute;
+        bottom: 120%; /* Position above the button */
+        right: 0;
+        
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    #dog-button:hover .tooltip{
+        visibility: visible;
+        opacity: 1;
+        animation: expand 2s infinite;
+        animation-direction: alternate;
+        transition: width 2s ease-out;
+    }
+
+    #dog {
+        width: 100px;
+        height: auto;
+    }
+
+  @keyframes expand {
+    0% {
+        transform: scaleX(1);
+    }
+    50% {
+        transform: scaleX(1.1);
+    }
+    100% {
+        transform: scaleX(1);
+    }}
