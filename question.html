@@ -1,0 +1,48 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alaina's Preferences</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("tr9hMiOFn21g3eswR");
+        })();
+    </script>
+</head>
+<body>
+    <h1>Alaina's Preferences</h1>
+    <form id="love-questionnaire">
+        <label for="q1">What's your favorite way to spend a date night?</label>
+        <select id="q1" name="q1" onchange="toggleOtherInput('q1')">
+            <option value="Dinner at a fancy restaurant">Dinner at a fancy restaurant</option>
+            <option value="Watching a movie together">Watching a movie together</option>
+            <option value="Going to a cafe">Going to a cafe</option>
+            <option value="Other">Other (please specify)</option>
+        </select>
+        <input type="text" id="q1-other" name="q1-other" style="display:none;" placeholder="Please specify">
+        <br><br>
+        <label for="q2">Which place would you like to go?</label>
+        <select id="q2" name="q2" name="q2" onchange="toggleOtherInput('q2')">
+            <option value="Suntec City">Suntec City</option>
+            <option value="Orchard">Orchard</option>
+            <option value="Dhoby Ghaut">Dhoby Ghaut</option>
+            <option value="Other">Other (please specify)</option>
+        </select>
+        <input type="text" id="q2-other" name="q2-other" style="display:none;" placeholder="Please specify">
+        <br><br>
+        <label for="q3">What do you define a perfect gift ?</label>
+        <input type="text" id="q3" name="q3">
+        <br><br>
+        <button type="submit" id="submit">Submit</button>
+        <input type="hidden" id="email" name="email" value="sherifblast@gmail.com">
+        <div id="results"></div>
+    </form>
+    
+
+    <script src="email_script.js"></script>
+</body>
+</html>
