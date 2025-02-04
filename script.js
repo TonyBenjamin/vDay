@@ -29,5 +29,5 @@ function handleNoClick() {
 }
 
 function handleYesClick() {
-    window.location.href = "test.html";
+    window.location.href = "/vDay/test.html";
 }
