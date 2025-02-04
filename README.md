@@ -26,7 +26,7 @@ The JavaScript file that contains the logic for form validation, handling the "O
    cd alainas-preference
 
 
-Form Structure
+## Form Structure
 The form consists of three questions:
 
 Favorite way to spend a date night.
