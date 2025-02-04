@@ -1,0 +1,78 @@
+/* style.css */
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f9c5c8;
+    margin: 0;
+    position: relative;
+    overflow: hidden; /* Prevents the dog from scrolling */
+}
+
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+form:hover {
+    transform: scale(1.05);
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    position: absolute;
+    top: 150px; /* Adjust the value as needed */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center the title based on its width */
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+select, input[type="text"], button {
+    width: 90%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+/* button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+} */
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 50%; /* Make button 50% smaller */
+    padding: 10px; /* Adjust padding as needed */
+    border-radius: 50px;
+    margin-left: 25%; /* Center align the button */
+}
+
+button:active {
+    transform: scale(0.95); /* Add a pressed effect */
+}
+
+button:hover {
+    background-color: #45a049;
+    animation: expand 2s infinite;
+    animation-direction: alternate;
+    transition: width 2s ease-in-out;
+}
