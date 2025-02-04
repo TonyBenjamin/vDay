@@ -29,5 +29,5 @@ function handleNoClick() {
 }
 
 function handleYesClick() {
-    window.location.href = "/vDay/question.html";
+    window.location.href = "question.html";
 }
